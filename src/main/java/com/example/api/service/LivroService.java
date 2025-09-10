@@ -27,4 +27,7 @@ public class LivroService {
         return livros;
     }
 
+    public void deletarLivro(long codigo){
+        livros.removeIf(livro -> livro.getCodigo() == codigo);
+    }
 }

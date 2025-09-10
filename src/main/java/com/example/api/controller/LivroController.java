@@ -35,6 +35,7 @@ public class LivroController {
 
     @DeleteMapping("/exclui/{codigo}")
     public ResponseEntity<String> excluirLivro(@PathVariable("codigo") Long codigo){
+        livroService.deletarLivro(codigo);
         return new ResponseEntity<>("Livro Excluído com Sucesso!", HttpStatus.OK);
     }
 
